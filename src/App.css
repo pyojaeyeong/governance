@@ -1,38 +1,976 @@
-.App {
-  text-align: center;
+div,
+p,
+span,
+ol,
+ul,
+li,
+button,
+img,
+a {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+ul,
+ol,
+li {
+  list-style: none;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+button {
+  background-color: inherit;
+  cursor: pointer;
+}
+img {
+  background-color: transparent;
+}
+
+body {
+  background: #191919;
+  box-sizing: border-box;
+  font-family: "Pretendard";
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+@font-face {
+  font-family: "Pretendard-Regular";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
+    format("woff");
+  font-weight: 400;
+  font-style: normal;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #464646;
+  padding: 12px 20px;
+}
+
+header .logo {
+  width: 200px;
+  background-image: url(/public/image/logo_type_governance.png);
+  background-repeat: no-repeat;
+  background-position: 100% 50%;
+}
+
+.logo img {
+  padding-right: 170px;
+}
+
+.menu-container button {
+  width: 30px;
+  height: 30px;
+  background-image: url(/public/image/gnb_right_menu.png);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
+main {
+  height: 970px;
+  display: flex;
+  flex-direction: row;
+}
+
+.main-title {
+  position: relative;
+  box-sizing: border-box;
+  flex: 1;
+  padding: 60px 40px;
+  border-right: 1px solid #464646;
+}
+
+.main-title strong {
+  font-weight: 500;
+  font-size: 88px;
+  line-height: 105px;
+  color: #ffffff;
+  text-shadow: rgba(0, 0, 0, 0.25) 0 4px 4px;
+}
+
+.main-title p {
+  font-weight: 500;
+  font-size: 18px;
+  color: #ffffff;
+}
+
+.scroll {
+  position: absolute;
+  bottom: 5%;
+}
+
+.lottie-motion {
+  flex: 1;
+  background-image: url(/public/image/lottie_motion.png);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
+.ncp {
+  background-color: #a484ff;
+  color: #1a1a1a;
+}
+
+.wonders {
+  text-align: center;
+  padding: 80px 250px;
+}
+
+.wonders strong {
+  margin: 30px 0;
+  font-weight: 600;
+  font-size: 44px;
+  line-height: 62px;
+}
+
+.wonders p {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.users {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #464646;
+}
+
+.user-list {
+  flex: 1;
+  padding: 30px;
+  border-right: 1px solid #464646;
+}
+
+.users li:last-child {
+  border-right: none;
+}
+
+.user-title {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.user-list strong {
+  font-weight: 500;
+  font-size: 88px;
+  line-height: 105px;
+}
+
+.staking-user {
+  padding-left: 70px;
+  background-image: url(/public/image/bl.png);
+  background-repeat: no-repeat;
+  background-position: 0 60%;
+}
+
+.rewards {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.rewards-item {
+  width: 50%;
+  padding-bottom: 10%;
+}
+
+.rewards-item p {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.rewards-item strong {
+  font-weight: 600;
+  font-size: 56px;
+  line-height: 67px;
+}
+
+.roles strong {
+  padding: 50px;
+  display: block;
+  font-weight: 500;
+  font-size: 72px;
+  line-height: 86px;
+  text-align: center;
+}
+
+.roles ul {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.role {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  border: 1px solid #464646;
+}
+
+.role-zone {
+  border-right: 1px solid #464646;
+}
+
+.role-img {
+  width: 200px;
+}
+
+.role-info {
+  padding: 30px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: #d1d1d1;
+}
+
+.role-info b {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+}
+
+.become {
+  background: #8db1e8;
+  padding: 100px 50px;
+  text-align: center;
+}
+
+.become strong {
+  font-weight: 600;
+  font-size: 56px;
+  line-height: 67px;
+  color: #1a1a1a;
+}
+
+.become p {
+  margin: 20px 0;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
+  color: #1a1a1a;
+}
+
+.become a {
+  display: block;
+  width: 250px;
+  margin: 0 auto;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  padding: 12px 76px 12px 16px;
+  background-color: #1a1a1a;
+  background-image: url(/public/image/ic_arrow_right.png);
+  background-repeat: no-repeat;
+  background-size: 24px;
+  background-position: 90% 50%;
+}
+
+.partners-zone {
+  display: flex;
+  justify-content: center;
+}
+
+.partners ul {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
+.our-partners {
+  flex: 1;
+  padding: 10px 0 0 20px;
+}
+
+.our-partners strong {
+  font-weight: 500;
+  font-size: 72px;
+  line-height: 86px;
+}
+
+.our-partners p {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
+}
+
+.partners {
+  flex: 1;
+}
+
+.partner {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  border: 1px solid #464646;
+}
+
+.partner-info {
+  padding: 30px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: #d1d1d1;
+  border-left: 1px solid #464646;
+}
+
+.partner-info b {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+}
+
+.partner-info a {
+  padding-left: 5px;
+  vertical-align: middle;
+}
+
+.partner-img {
+  width: 132px;
+  padding: 30px;
+}
+
+.roadmap {
+  background-color: #a484ff;
+  color: #1a1a1a;
+}
+
+.roadmap-title {
+  text-align: center;
+  padding: 100px;
+  border-bottom: 1px solid #464646;
+}
+
+.roadmap-title p:first-child {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 29px;
+}
+
+.roadmap-title strong {
+  font-weight: 600;
+  font-size: 56px;
+  line-height: 67px;
+}
+
+.roadmap-title p:last-child {
+  margin-top: 30px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
+}
+
+.roadmap-info ul {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.roadmap-info li {
+  width: 100%;
+  padding: 20px;
+  border-right: 1px solid #464646;
+}
+
+.accordion-title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.accordion-title span {
+  padding: 3px 9px;
+  background-color: black;
+  color: white;
+}
+
+.accordion-title button {
+  padding: 10px;
+}
+
+.phase {
+  font-weight: 600;
+  font-size: 44px;
+  line-height: 62px;
+}
+
+.phase-list {
+  position: relative;
+  width: 100%;
+}
+
+.accordion-content {
+  margin-bottom: 20px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
+}
+
+.more-title {
+  padding: 30px;
+}
+
+.more-title {
+  font-weight: 500;
+  font-size: 72px;
+  line-height: 86px;
+}
+
+.more-sns-zone {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #464646;
+}
+
+.more-sns-title {
+  flex: 1;
+}
+
+.more-sns-list {
+  flex: 1;
+  width: 100%;
+}
+
+.more-sns-title p {
+  padding-left: 30px;
+  font-weight: 600;
+  font-size: 56px;
+  line-height: 67px;
+}
+
+.more-sns-list ul {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.more-sns {
+  width: 20%;
+  padding: 3%;
+  border: 1px solid #464646;
+}
+
+.more-sns a {
+  display: block;
+}
+
+.sns-img {
+  width: 100%;
+}
+
+.wemix-link-zone {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  border-left: 1px solid #464646;
+}
+
+.wemix-link-title {
+  flex: 1;
+  border: 1px solid #464646;
+}
+
+.wemix-link-title p {
+  font-size: 600;
+  font-size: 56px;
+  line-height: 67px;
+  padding: 30px;
+}
+
+.wemix-link {
+  flex: 1;
+}
+
+.wemix-link-list {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.wemix-link-list strong {
+  font-size: 600;
+  font-size: 56px;
+  line-height: 67px;
+}
+
+.wemix-link-list p {
+  font-size: 500;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.wemix-list {
+  width: 50%;
+  padding: 20px;
+  border: 1px solid #464646;
+}
+
+.wemix-list img {
+  width: 44px;
+}
+
+.list-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-family {
+  padding: 48px 40px;
+}
+
+.family-Sites {
+  margin: 30px 0 20px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  color: #464646;
+}
+
+.family-list a {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.family-list-zone {
+  padding-bottom: 20px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+  border-bottom: 1px solid #464646;
+}
+
+.footer-content-list a {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  color: #464646;
+}
+
+.footer-content-list img {
+  width: 16px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 24px;
+}
+
+.footer-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+}
+
+.footer-sns ul {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.wemix-pte {
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 15px;
+  color: #464646;
+}
+
+@media screen and (orientation) {
+  .our-partners strong::after {
+    content: "Our Partners";
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@media screen and (max-width: 1500px) {
+  .main-title strong {
+    font-size: 68px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  @media screen and (orientation) {
+    .our-partners strong::after {
+      content: "Meet the WONDERS";
+    }
+  }
+  main {
+    height: 512px;
+  }
+
+  .lottie-motion {
+    background-size: 460px;
+  }
+
+  .main-title strong {
+    font-size: 48px;
+    line-height: 58px;
+  }
+
+  .main-title p {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .wonders {
+    padding: 70px 50px;
+  }
+
+  .wonders strong {
+    font-size: 24px;
+    line-height: 34px;
+  }
+
+  .wonders p {
+    font-size: 14px;
+    line-height: 21px;
+  }
+
+  .user-title {
+    font-size: 18px;
+    line-height: 22px;
+  }
+
+  .user-list strong {
+    font-size: 48px;
+    line-height: 58px;
+  }
+
+  .staking-user {
+    padding-left: 40px;
+    background-size: 40px;
+  }
+
+  .rewards-item p {
+    font-size: 12px;
+    line-height: 4 / px;
+  }
+
+  .rewards-item strong {
+    font-size: 32px;
+    line-height: 38px;
+  }
+
+  .role {
+    width: 100%;
+  }
+
+  .roles strong {
+    padding: 40px;
+    font-size: 40px;
+    line-height: 48px;
+  }
+
+  .become {
+    padding: 50px;
+  }
+
+  .become strong {
+    font-size: 32px;
+    line-height: 38px;
+  }
+
+  .our-partners strong {
+    font-size: 40px;
+    line-height: 48px;
+  }
+
+  .our-partners p {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 27px;
+  }
+
+  .partner-info {
+    padding: 15px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 21px;
+  }
+
+  .partner-info b {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+  }
+
+  .roadmap-title {
+    text-align: start;
+    padding: 50px;
+  }
+
+  .roadmap-title p:first-child {
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  .roadmap-title strong {
+    font-size: 32px;
+    line-height: 38px;
+  }
+
+  .roadmap-title p:last-child {
+    margin-top: 20px;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .phase {
+    font-size: 24px;
+    line-height: 34px;
+  }
+
+  .roadmap-info p {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .more-title {
+    font-size: 40px;
+    line-height: 48px;
+  }
+
+  .more-sns-title p {
+    font-size: 32px;
+    line-height: 38px;
+  }
+
+  .wemix-link-zone > p {
+    font-size: 32px;
+    line-height: 38px;
+  }
+
+  .wemix-link-list strong {
+    font-size: 32px;
+    line-height: 38px;
+  }
+
+  .wemix-list img {
+    width: 18px;
+  }
+}
+@media screen and (max-width: 768px) {
+  header .logo {
+    width: 0;
+    background-image: none;
+  }
+
+  .logo img {
+    padding: 5px;
+  }
+
+  main {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column-reverse;
+    flex-wrap: wrap;
+  }
+
+  .lottie-motion {
+    border-bottom: 1px solid #464646;
+  }
+
+  .main-title {
+    padding: 20px;
+    border-right: none;
+  }
+
+  .main-title strong {
+    font-size: 32px;
+    line-height: 38px;
+  }
+
+  .main-title p {
+    font-size: 14px;
+    line-height: 21px;
+  }
+
+  .scroll {
+    display: none;
+  }
+
+  .wonders {
+    text-align: start;
+    padding: 20px;
+  }
+
+  .user-title {
+    font-size: 16px;
+    line-height: 19px;
+  }
+
+  .user-list strong {
+    font-size: 32px;
+    line-height: 38px;
+  }
+
+  .users {
+    display: flex;
+    flex-direction: column;
+    border-top: none;
+  }
+
+  .user-list {
+    border-right: none;
+    border-top: 1px solid #464646;
+  }
+
+  .staking-user {
+    padding-left: 30px;
+    background-position: 0 55%;
+    background-size: 30px;
+  }
+
+  .rewards {
+    flex-wrap: nowrap;
+  }
+
+  .rewards-item {
+    width: 100%;
+    padding: 5% 0;
+  }
+
+  .rewards-item p {
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  .rewards-item strong {
+    font-size: 24px;
+    line-height: 34px;
+  }
+
+  .role-zone {
+    border: 0;
+  }
+
+  .role-info {
+    font-size: 14px;
+    line-height: 21px;
+    border-left: 1px solid #464646;
+  }
+
+  .role-info b {
+    font-size: 16px;
+    line-height: 19px;
+  }
+
+  .become {
+    padding: 30px;
+  }
+
+  .become strong {
+    font-size: 24px;
+    line-height: 34px;
+  }
+
+  .become p {
+    font-size: 14px;
+    line-height: 21px;
+  }
+
+  .partners-zone {
+    flex-direction: column;
+  }
+
+  .our-partners {
+    padding: 30px 20px;
+  }
+
+  .partner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .roadmap-title p:first-child {
+    font-size: 16px;
+    line-height: 19px;
+  }
+
+  .roadmap-title p:last-child {
+    font-size: 14px;
+    line-height: 21px;
+  }
+
+  .roadmap-info p {
+    font-size: 14px;
+    line-height: 21px;
+  }
+
+  .roadmap-info ul {
+    flex-direction: column;
+  }
+
+  .more-title {
+    font-size: 32px;
+    line-height: 38px;
+  }
+
+  .more-sns-zone {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .more-sns-title p {
+    padding: 30px;
+    font-size: 24px;
+    line-height: 34px;
+  }
+
+  .more-sns {
+    padding: 3%;
+  }
+
+  .wemix-link-zone > p {
+    font-size: 24px;
+    line-height: 34px;
+  }
+
+  .wemix-list {
+    width: 100%;
+  }
+
+  .wemix-link-list {
+    flex-direction: column;
+  }
+
+  .wemix-link-list strong {
+    font-size: 24px;
+    line-height: 34px;
+  }
+
+  .wemix-list img {
+    width: 16px;
+  }
+
+  .wemix-link-zone {
+    flex-direction: column;
+  }
+
+  .footer-info {
+    flex-direction: column-reverse;
+    justify-content: flex-start;
+    align-items: flex-start;
   }
 }
