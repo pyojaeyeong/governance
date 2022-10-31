@@ -1,4 +1,5 @@
 import React from "react";
+import DropupMenu from "./DropupMenu";
 
 const FamilyList = ({ familyApp }) => {
   return (
@@ -55,11 +56,7 @@ const Pretendard = () => {
     },
     {
       id: 4,
-      name: (
-        <button>
-          <img src="./image/gnb_black.png" alt="footer gnb change img" />
-        </button>
-      ),
+      name: <DropupMenu />,
     },
   ];
 

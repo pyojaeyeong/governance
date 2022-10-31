@@ -565,6 +565,10 @@ main {
   color: #464646;
 }
 
+.footer-content-list a:last-child {
+  color: white;
+}
+
 .footer-content-list img {
   width: 16px;
 }
