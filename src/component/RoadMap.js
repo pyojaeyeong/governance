@@ -122,7 +122,7 @@ const RoadMap = () => {
     <>
       <div className="roadmap">
         <div className="roadmap-title">
-          <p>Roadmap of WEMIX3.0</p>
+          <span>Roadmap of WEMIX3.0</span>
           <strong>Decentralized technology, Democratized governance</strong>
           <p>
             WEMIX3.0 mainnet, developed on a decentralized architecture, will
@@ -136,8 +136,8 @@ const RoadMap = () => {
         </div>
         <div className="roadmap-info">
           <ul className="phase-list">
-            {phaseList.map(({ title, info }) => (
-              <Accordion title={title} info={info} key={phaseList.id} />
+            {phaseList.map(({ title, info, id }) => (
+              <Accordion title={title} info={info} key={id} />
             ))}
           </ul>
         </div>

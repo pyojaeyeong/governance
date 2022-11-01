@@ -14,7 +14,7 @@ const Main = () => {
             of the mega-ecosystem while providing impenetrable security on our
             new layer 1 mainnet.
           </p>
-          <p className="scroll">↓ SCROLL</p>
+          <button className="scroll">SCROLL</button>
         </div>
         <div className="lottie-motion"></div>
       </main>

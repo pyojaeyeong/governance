@@ -11,14 +11,14 @@ const DropdownMenu = () => {
         <img src="./image/gnb_right_menu.png" alt=""></img>
       </DropdownButton>
       <Menu isDropped={btnIsOpen}>
-        <Ul>
-          <Li>
+        <DropdownMenuUL>
+          <DropdownLI>
             <LinkWrapper href="/">English</LinkWrapper>
-          </Li>
-          <Li>
+          </DropdownLI>
+          <DropdownLI>
             <LinkWrapper href="/">한국어</LinkWrapper>
-          </Li>
-        </Ul>
+          </DropdownLI>
+        </DropdownMenuUL>
       </Menu>
     </DropdownContainer>
   );
@@ -31,7 +31,7 @@ const DropdownContainer = styled.div`
   text-align: center;
 `;
 
-const DropdownButton = styled.div`
+const DropdownButton = styled.button`
   cursor: pointer;
 `;
 
@@ -73,7 +73,7 @@ const Menu = styled.div`
     `};
 `;
 
-const Ul = styled.ul`
+const DropdownMenuUL = styled.ul`
   & > li {
     margin-bottom: 10px;
   }
@@ -90,7 +90,7 @@ const Ul = styled.ul`
   align-items: center;
 `;
 
-const Li = styled.li``;
+const DropdownLI = styled.li``;
 
 const LinkWrapper = styled.a`
   font-size: 16px;

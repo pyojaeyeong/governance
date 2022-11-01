@@ -3,17 +3,16 @@ import React from "react";
 const OurPartners = ({ partner }) => {
   return (
     <li className="partner">
-      <p className="partner-img-zone">{partner.image}</p>
-      <p className="partner-info">
-        <b>
+      <div className="partner-img-zone">{partner.image}</div>
+      <div className="partner-info">
+        <div>
           {partner.title}
           <a href="/">
             <img src="./image/ic_link.png" alt="partner link img" />
           </a>
-        </b>
-        <br />
+        </div>
         {partner.info}
-      </p>
+      </div>
     </li>
   );
 };

@@ -1,3 +1,11 @@
+@font-face {
+  font-family: "Pretendard-Regular";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
+    format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
 div,
 p,
 span,
@@ -35,16 +43,8 @@ img {
 body {
   background: #191919;
   box-sizing: border-box;
-  font-family: "Pretendard";
   color: white;
-}
-
-@font-face {
   font-family: "Pretendard-Regular";
-  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
-    format("woff");
-  font-weight: 400;
-  font-style: normal;
 }
 
 header {
@@ -89,22 +89,31 @@ main {
 }
 
 .main-title strong {
+  width: 100%;
+  margin: 0 auto;
   font-weight: 500;
-  font-size: 88px;
+  font-size: 4vw;
   line-height: 105px;
   color: #ffffff;
   text-shadow: rgba(0, 0, 0, 0.25) 0 4px 4px;
 }
 
 .main-title p {
+  width: 50%;
+  padding: 10px 0;
   font-weight: 500;
   font-size: 18px;
   color: #ffffff;
 }
 
 .scroll {
+  padding: 10px 20px;
   position: absolute;
   bottom: 5%;
+  background-image: url(/public/image/ic_arrow.png);
+  background-repeat: no-repeat;
+  background-position: 0 45%;
+  color: #ffffff;
 }
 
 .lottie-motion {
@@ -120,8 +129,10 @@ main {
 }
 
 .wonders {
+  display: flex;
+  flex-direction: column;
   text-align: center;
-  padding: 80px 250px;
+  padding: 80px 200px;
 }
 
 .wonders strong {
@@ -131,7 +142,7 @@ main {
   line-height: 62px;
 }
 
-.wonders p {
+.wonders span {
   font-weight: 500;
   font-size: 16px;
   line-height: 24px;
@@ -144,7 +155,10 @@ main {
 }
 
 .user-list {
+  display: flex;
   flex: 1;
+  flex-direction: column;
+  gap: 20px;
   padding: 30px;
   border-right: 1px solid #464646;
 }
@@ -179,11 +193,14 @@ main {
 }
 
 .rewards-item {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
   width: 50%;
-  padding-bottom: 10%;
+  margin-bottom: 30px;
 }
 
-.rewards-item p {
+.rewards-item span {
   font-weight: 500;
   font-size: 14px;
   line-height: 21px;
@@ -195,13 +212,24 @@ main {
   line-height: 67px;
 }
 
-.roles strong {
-  padding: 50px;
+.roles > strong {
+  padding: 53px 0;
   display: block;
   font-weight: 500;
   font-size: 72px;
   line-height: 86px;
   text-align: center;
+}
+
+.role-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.role-info > strong {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
 }
 
 .roles ul {
@@ -290,7 +318,6 @@ main {
 
 .our-partners {
   flex: 1;
-  padding: 10px 0 0 20px;
 }
 
 .our-partners strong {
@@ -347,12 +374,14 @@ main {
 }
 
 .roadmap-title {
+  display: flex;
+  flex-direction: column;
   text-align: center;
   padding: 100px;
   border-bottom: 1px solid #464646;
 }
 
-.roadmap-title p:first-child {
+.roadmap-title span {
   font-weight: 600;
   font-size: 24px;
   line-height: 29px;
@@ -364,7 +393,7 @@ main {
   line-height: 67px;
 }
 
-.roadmap-title p:last-child {
+.roadmap-title p {
   margin-top: 30px;
   font-weight: 500;
   font-size: 18px;
@@ -419,10 +448,7 @@ main {
 }
 
 .more-title {
-  padding: 30px;
-}
-
-.more-title {
+  padding: 50px 0;
   font-weight: 500;
   font-size: 72px;
   line-height: 86px;
@@ -446,7 +472,6 @@ main {
 }
 
 .more-sns-title p {
-  padding-left: 30px;
   font-weight: 600;
   font-size: 56px;
   line-height: 67px;
@@ -517,13 +542,23 @@ main {
 
 .wemix-list {
   width: 50%;
-  padding: 20px;
+  padding: 20px 20px 100px 20px;
   border: 1px solid #464646;
 }
 
 .wemix-list img {
   width: 44px;
 }
+
+/* .wemix-list p:last-child {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+  color: #fa5454;
+  padding: 4px 8px;
+  border: 1px solid #fa5454;
+  border-radius: 100px;
+} */
 
 .list-title {
   display: flex;
@@ -645,7 +680,7 @@ main {
     line-height: 34px;
   }
 
-  .wonders p {
+  .wonders span {
     font-size: 14px;
     line-height: 21px;
   }
@@ -767,6 +802,10 @@ main {
   .wemix-link-list strong {
     font-size: 32px;
     line-height: 38px;
+  }
+
+  .wemix-list {
+    padding: 20px 20px 50px 20px;
   }
 
   .wemix-list img {

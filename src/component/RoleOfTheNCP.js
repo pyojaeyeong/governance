@@ -3,12 +3,12 @@ import React from "react";
 const Role = ({ role }) => {
   return (
     <li className="role">
-      <p className="role-zone">{role.image}</p>
-      <p className="role-info">
-        <b>{role.title}</b>
-        <br />
-        {role.info}
-      </p>
+      <div className="role-zone">{role.image}</div>
+      <div className="role-info">
+        <strong>{role.title}</strong>
+        <span>{role.info}</span>
+        <span>{role.text}</span>
+      </div>
     </li>
   );
 };
@@ -17,8 +17,9 @@ const RoleOfTheNCP = () => {
   let role = [
     {
       id: 1,
-      title: "Integrity",
+      title: "Integrity & Security",
       info: `As authorized members of node operation, NCPs are responsivle for facilitation of infrastucture or hardware1 as required. They also play a vital role in ensuring integrity and security of the WEMIX newwork by continuously sharing block information to neighboring nodes.`,
+      text: "1 Optional",
       image: (
         <img
           className="role-img"

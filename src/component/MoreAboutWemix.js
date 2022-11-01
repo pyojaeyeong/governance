@@ -13,7 +13,7 @@ const WemixLink = ({ link }) => {
     <li className="wemix-list">
       <div className="list-title">
         <strong>{link.name}</strong>
-        <p>{link.link}</p>
+        <button>{link.link}</button>
       </div>
       <p>{link.info}</p>
     </li>
@@ -118,15 +118,16 @@ const MoreAboutWemix = () => {
       id: 4,
       name: "WEMIX.Fi",
       info: "A secure on-chain DeFi platform that supports storage, exchange, borrowing, settlement and investment of crypto-assets powered by oracles that collect, analyze, and broadcast data propagated from a variety of sources for security and validation.",
+      open: "COMING SOON",
     },
   ];
   return (
     <>
       <div className="more-wemix">
-        <p className="more-title">More about WEMIX3.0</p>
+        <strong className="more-title">More about WEMIX3.0</strong>
         <div className="more-sns-zone">
           <div className="more-sns-title">
-            <p>Communications</p>
+            <strong>Communications</strong>
           </div>
           <div className="more-sns-list">
             <ul>
@@ -138,7 +139,7 @@ const MoreAboutWemix = () => {
         </div>
         <div className="wemix-link-zone">
           <div className="wemix-link-title">
-            <p>WEMIX Mega-ecosystem</p>
+            <strong>WEMIX Mega-ecosystem</strong>
           </div>
           <div className="wemix-link">
             <ul className="wemix-link-list">

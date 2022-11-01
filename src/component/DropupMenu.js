@@ -8,17 +8,17 @@ const DropupMenu = () => {
   return (
     <DropdownContainer>
       <DropdownButton onClick={btnHandler} ref={btnRef}>
-        <img src="./image/gnb_black.png" alt="footer gnd change btn"></img>
+        <img src="./image/gnb_black.png" alt="footer gnb change"></img>
       </DropdownButton>
       <Menu isDropped={btnIsOpen}>
-        <Ul>
-          <Li>
+        <DropdownMenu>
+          <DropdownMenuList>
             <LinkWrapper href="/">English</LinkWrapper>
-          </Li>
-          <Li>
+          </DropdownMenuList>
+          <DropdownMenuList>
             <LinkWrapper href="/">한국어</LinkWrapper>
-          </Li>
-        </Ul>
+          </DropdownMenuList>
+        </DropdownMenu>
       </Menu>
     </DropdownContainer>
   );
@@ -31,7 +31,7 @@ const DropdownContainer = styled.div`
   text-align: center;
 `;
 
-const DropdownButton = styled.div`
+const DropdownButton = styled.button`
   cursor: pointer;
 `;
 
@@ -73,7 +73,7 @@ const Menu = styled.div`
     `};
 `;
 
-const Ul = styled.ul`
+const DropdownMenu = styled.ul`
   & > li {
     margin-bottom: 10px;
   }
@@ -90,7 +90,7 @@ const Ul = styled.ul`
   align-items: center;
 `;
 
-const Li = styled.li``;
+const DropdownMenuList = styled.li``;
 
 const LinkWrapper = styled.a`
   font-size: 16px;
