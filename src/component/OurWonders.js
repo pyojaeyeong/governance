@@ -7,8 +7,8 @@ const OurPartners = ({ partner }) => {
       <div className="partner-info">
         <div>
           {partner.title}
-          <a href="/">
-            <img src="./image/ic_link.png" alt="partner link img" />
+          <a href="/" target="_blank">
+            <img src="./image/ic_link.png" alt="partner link" />
           </a>
         </div>
         {partner.info}
@@ -27,7 +27,7 @@ const OurWonders = () => {
         <img
           className="partner-img"
           src={process.env.PUBLIC_URL + "./image/circle.png"}
-          alt="Partner Circle info img"
+          alt="Partner Circle"
         ></img>
       ),
     },
@@ -39,7 +39,7 @@ const OurWonders = () => {
         <img
           className="partner-img"
           src={process.env.PUBLIC_URL + "./image/blockdaemon.png"}
-          alt="Partner blockdaemon info img"
+          alt="Partner blockdaemon"
         ></img>
       ),
     },
@@ -51,7 +51,7 @@ const OurWonders = () => {
         <img
           className="partner-img"
           src={process.env.PUBLIC_URL + "./image/multichain.png"}
-          alt="partner multichain info img"
+          alt="partner multichain"
         ></img>
       ),
     },
@@ -63,7 +63,7 @@ const OurWonders = () => {
         <img
           className="partner-img"
           src={process.env.PUBLIC_URL + "./image/dsrv.png"}
-          alt="partner DSPV Labs info img"
+          alt="partner DSPV Labs"
         ></img>
       ),
     },

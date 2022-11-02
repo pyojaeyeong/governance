@@ -3,9 +3,12 @@ import DropupMenu from "./DropupMenu";
 
 const FamilyList = ({ familyApp }) => {
   return (
-    <li className="family-list">
-      <a href="/">{familyApp.name}</a>
-    </li>
+    <>
+      <li className="family-list">
+        <span>{familyApp.link}</span>
+        {familyApp.link ? null : <span className="comming-soon">WEMIX.FI</span>}
+      </li>
+    </>
   );
 };
 
@@ -16,7 +19,9 @@ const FooterService = ({ footerContent }) => {
 const FooterSns = ({ footerSns }) => {
   return (
     <li className="footer-sns-list">
-      <a href="/">{footerSns.image}</a>
+      <a href="/" target="_blank">
+        {footerSns.image}
+      </a>
     </li>
   );
 };
@@ -25,19 +30,31 @@ const Pretendard = () => {
   let familyApp = [
     {
       id: 1,
-      name: "WEMIX",
+      link: (
+        <a href="/" target="_blank">
+          WEMIX
+        </a>
+      ),
     },
     {
       id: 2,
-      name: "WEMIX PLAY",
+      link: (
+        <a href="/" target="_blank">
+          WEMIX PLAY
+        </a>
+      ),
     },
     {
       id: 3,
-      name: "NILE",
+      link: (
+        <a href="/" target="_blank">
+          NILE
+        </a>
+      ),
     },
     {
       id: 4,
-      name: "WEMIX.Fi",
+      name: "WEMIX.FI",
     },
   ];
 
@@ -87,10 +104,22 @@ const Pretendard = () => {
   return (
     <div className="footer-family">
       <div>
-        <a href="/">
-          <img src="./image/logo_black.png" alt=""></img>
-        </a>
+        <div className="footer-select">
+          <a href="/">
+            <img src="./image/logo_black.png" alt="GOVERNANCE"></img>
+          </a>
+          <select>
+            <option value="none" disabled selected>
+              Family Sites
+            </option>
+            <option value="/">WEMIX</option>
+            <option value="WEMIXPLAY">WEMIX PLAY</option>
+            <option value="NILE">NILE</option>
+            <option value="WEMIX.FI">WEMIX.FI</option>
+          </select>
+        </div>
         <span className="family-Sites">Family Sites</span>
+
         <ul className="family-list-zone">
           {familyApp.map((familyApp) => (
             <FamilyList familyApp={familyApp} key={familyApp.id} />

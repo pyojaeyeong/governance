@@ -1,4 +1,29 @@
 import React, { useState } from "react";
+// import { AccordionContainer, AccordionContent } from "./Accorion";
+
+// const Accordion = ({ phaseList }) => {
+//   const [active, setActive] = useState();
+
+//   const handleClick = (title) => {
+//     setActive(title === active ? null : title);
+//   };
+
+//   return (
+//     <AccordionContainer>
+//       {phaseList.map((phase) => {
+//         let isActive = active === phase.title;
+//         return (
+//           <AccordionContent
+//             onClick={() => handleClick(phase.title)}
+//             itemName={phase.title}
+//             itemContent={phase.info}
+//             isActive={isActive}
+//           />
+//         );
+//       })}
+//     </AccordionContainer>
+//   );
+// };
 
 const Accordion = ({ title, info }) => {
   const [isActive, setIsActive] = useState(true);
@@ -7,7 +32,17 @@ const Accordion = ({ title, info }) => {
       <div className="accordion-title">
         <div className="phase">{title}</div>
         <button onClick={() => setIsActive(!isActive)}>
-          {isActive ? "▲" : "▼"}
+          {isActive ? (
+            <img
+              src="/image/accordion_arrow-down.png"
+              alt="accordion menu open"
+            />
+          ) : (
+            <img
+              src="/image/accordion_arrow-up.png"
+              alt="accordion menu close"
+            />
+          )}
         </button>
       </div>
       {isActive && <div className="accordion-content">{info}</div>}
@@ -136,6 +171,9 @@ const RoadMap = () => {
         </div>
         <div className="roadmap-info">
           <ul className="phase-list">
+            {/* <li>
+              <Accordion phaseList={phaseList} />
+            </li> */}
             {phaseList.map(({ title, info, id }) => (
               <Accordion title={title} info={info} key={id} />
             ))}

@@ -3,7 +3,9 @@ import React from "react";
 const Sns = ({ sns }) => {
   return (
     <li className="more-sns">
-      <a href="/">{sns.image}</a>
+      <a href="/" target="_blank">
+        {sns.image}
+      </a>
     </li>
   );
 };
@@ -12,8 +14,12 @@ const WemixLink = ({ link }) => {
   return (
     <li className="wemix-list">
       <div className="list-title">
-        <strong>{link.name}</strong>
-        <button>{link.link}</button>
+        <span>{link.name}</span>
+        {link.link ? (
+          <button>{link.link}</button>
+        ) : (
+          <span className="open">COMING SOON</span>
+        )}
       </div>
       <p>{link.info}</p>
     </li>
@@ -28,7 +34,7 @@ const MoreAboutWemix = () => {
         <img
           className="sns-img"
           src={process.env.PUBLIC_URL + "./image/sns1.png"}
-          alt="WEMIX3.0 info sns1 img"
+          alt="WEMIX3.0 info on WEMIX Medium"
         ></img>
       ),
     },
@@ -38,7 +44,7 @@ const MoreAboutWemix = () => {
         <img
           className="sns-img"
           src={process.env.PUBLIC_URL + "./image/sns2.png"}
-          alt="WEMIX3.0 info sns2 img"
+          alt="WEMIX3.0 info on Telegram"
         ></img>
       ),
     },
@@ -48,7 +54,7 @@ const MoreAboutWemix = () => {
         <img
           className="sns-img"
           src={process.env.PUBLIC_URL + "./image/sns3.png"}
-          alt="WEMIX3.0 info sns3 img"
+          alt="WEMIX3.0 info on Twitter"
         ></img>
       ),
     },
@@ -58,7 +64,7 @@ const MoreAboutWemix = () => {
         <img
           className="sns-img"
           src={process.env.PUBLIC_URL + "./image/sns4.png"}
-          alt="WEMIX3.0 info sns4 img"
+          alt="WEMIX3.0 info on Youtube"
         ></img>
       ),
     },
@@ -68,7 +74,7 @@ const MoreAboutWemix = () => {
         <img
           className="sns-img"
           src={process.env.PUBLIC_URL + "./image/sns5.png"}
-          alt=" WEMIX3.0 info sns5 img"
+          alt=" WEMIX3.0 info on Facebook"
         ></img>
       ),
     },
@@ -77,7 +83,7 @@ const MoreAboutWemix = () => {
   let link = [
     {
       id: 1,
-      name: "WEMIX",
+      name: <img src="./image/wemix_more.png" alt="WEMIX"></img>,
       info: "Welcome to the open-source programmable future of Web3 era. WEMIX3.0 is an experience-based, platform-driven and service-oriented decentralized blockchain protocol built as the foundation of a borderless mega-ecosystem.",
       link: (
         <a href="/">
@@ -90,7 +96,7 @@ const MoreAboutWemix = () => {
     },
     {
       id: 2,
-      name: "WEMIXPLAY",
+      name: <img src="./image/wemixplay_more.png" alt="WEMIXPLAY"></img>,
       info: "The world's largest and fastest P&E gaming platform that implements the 'Pay' segment into the experience cycle of global gamers.",
       link: (
         <a href="/">
@@ -103,7 +109,7 @@ const MoreAboutWemix = () => {
     },
     {
       id: 3,
-      name: "NILE",
+      name: <img src="./image/nile_more.png" alt="NILE"></img>,
       info: "The next generation DAO-powered community platform built for creation, facilitation and management of projects based on smart contracts, innovating opportunities through collective potential.",
       link: (
         <a href="/">
@@ -116,15 +122,16 @@ const MoreAboutWemix = () => {
     },
     {
       id: 4,
-      name: "WEMIX.Fi",
+      name: <img src="./image/wemixfi_more.png" alt="WEMIX.FI"></img>,
       info: "A secure on-chain DeFi platform that supports storage, exchange, borrowing, settlement and investment of crypto-assets powered by oracles that collect, analyze, and broadcast data propagated from a variety of sources for security and validation.",
-      open: "COMING SOON",
     },
   ];
   return (
     <>
       <div className="more-wemix">
-        <strong className="more-title">More about WEMIX3.0</strong>
+        <div className="more-title">
+          <strong>More about WEMIX3.0</strong>
+        </div>
         <div className="more-sns-zone">
           <div className="more-sns-title">
             <strong>Communications</strong>

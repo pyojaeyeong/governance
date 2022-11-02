@@ -6,10 +6,7 @@ const Gnb = () => {
     <header>
       <div className="logo">
         <a href="/">
-          <img
-            src="/image/logo_wemixGovernance.png"
-            alt="거버넌스 로고 이미지"
-          />
+          <img src="/image/logo_wemixGovernance.png" alt="Governance" />
         </a>
       </div>
       <div className="menu-container">

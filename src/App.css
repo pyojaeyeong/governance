@@ -88,12 +88,10 @@ main {
   border-right: 1px solid #464646;
 }
 
-.main-title strong {
-  width: 100%;
+.main-title h1 {
   margin: 0 auto;
   font-weight: 500;
   font-size: 4vw;
-  line-height: 105px;
   color: #ffffff;
   text-shadow: rgba(0, 0, 0, 0.25) 0 4px 4px;
 }
@@ -255,17 +253,18 @@ main {
 }
 
 .role-info {
-  padding: 30px;
+  padding: 0 30px;
   font-weight: 500;
   font-size: 16px;
   line-height: 24px;
   color: #d1d1d1;
 }
 
-.role-info b {
-  font-weight: 600;
-  font-size: 18px;
-  line-height: 22px;
+.role-option {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+  color: #a7a7a7;
 }
 
 .become {
@@ -317,7 +316,9 @@ main {
 }
 
 .our-partners {
+  position: relative;
   flex: 1;
+  padding: 20px;
 }
 
 .our-partners strong {
@@ -352,14 +353,8 @@ main {
   border-left: 1px solid #464646;
 }
 
-.partner-info b {
-  font-weight: 600;
-  font-size: 18px;
-  line-height: 22px;
-}
-
 .partner-info a {
-  padding-left: 5px;
+  padding: 5px;
   vertical-align: middle;
 }
 
@@ -408,11 +403,11 @@ main {
 
 .roadmap-info li {
   width: 100%;
-  padding: 20px;
   border-right: 1px solid #464646;
 }
 
 .accordion-title {
+  padding: 20px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -426,7 +421,7 @@ main {
 }
 
 .accordion-title button {
-  padding: 10px;
+  display: none;
 }
 
 .phase {
@@ -441,16 +436,19 @@ main {
 }
 
 .accordion-content {
-  margin-bottom: 20px;
+  padding: 20px;
   font-weight: 500;
   font-size: 18px;
   line-height: 27px;
 }
 
 .more-title {
-  padding: 50px 0;
+  padding: 20px;
+}
+
+.more-title strong {
   font-weight: 500;
-  font-size: 72px;
+  font-size: 3vw;
   line-height: 86px;
 }
 
@@ -471,9 +469,13 @@ main {
   width: 100%;
 }
 
-.more-sns-title p {
+.more-sns-title {
+  padding: 20px;
+}
+
+.more-sns-title strong {
   font-weight: 600;
-  font-size: 56px;
+  font-size: 3vw;
   line-height: 67px;
 }
 
@@ -507,14 +509,14 @@ main {
 
 .wemix-link-title {
   flex: 1;
+  padding: 20px;
   border: 1px solid #464646;
 }
 
-.wemix-link-title p {
-  font-size: 600;
-  font-size: 56px;
+.wemix-link-title strong {
+  font-weight: 600;
+  font-size: 3vw;
   line-height: 67px;
-  padding: 30px;
 }
 
 .wemix-link {
@@ -528,10 +530,8 @@ main {
   flex-wrap: wrap;
 }
 
-.wemix-link-list strong {
-  font-size: 600;
-  font-size: 56px;
-  line-height: 67px;
+.wemix-link-list:last-child .list.title {
+  justify-content: flex-start;
 }
 
 .wemix-link-list p {
@@ -541,16 +541,22 @@ main {
 }
 
 .wemix-list {
+  position: relative;
   width: 50%;
-  padding: 20px 20px 100px 20px;
   border: 1px solid #464646;
+}
+
+.wemix-list p {
+  padding: 0 20px 150px 20px;
 }
 
 .wemix-list img {
   width: 44px;
 }
 
-/* .wemix-list p:last-child {
+.open {
+  position: absolute;
+  bottom: 10%;
   font-weight: 500;
   font-size: 14px;
   line-height: 21px;
@@ -558,20 +564,27 @@ main {
   padding: 4px 8px;
   border: 1px solid #fa5454;
   border-radius: 100px;
-} */
+}
 
 .list-title {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 20px;
+}
+
+.list-title span > img {
+  width: auto;
+  height: 25px;
 }
 
 .footer-family {
-  padding: 48px 40px;
+  padding: 40px;
 }
 
 .family-Sites {
-  margin: 30px 0 20px;
+  display: block;
+  padding: 10px 0;
   font-weight: 500;
   font-size: 12px;
   line-height: 18px;
@@ -600,10 +613,6 @@ main {
   color: #464646;
 }
 
-.footer-content-list a:last-child {
-  color: white;
-}
-
 .footer-content-list img {
   width: 16px;
 }
@@ -628,6 +637,28 @@ main {
   gap: 20px;
 }
 
+.footer-select {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer-select select {
+  display: none;
+  background-color: #191919;
+  color: #a7a7a7;
+  width: 140px;
+  height: 37px;
+  border: 1px solid #404040;
+}
+
+.footer-select option {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+}
+
 .wemix-pte {
   font-weight: 400;
   font-size: 10px;
@@ -635,15 +666,30 @@ main {
   color: #464646;
 }
 
+.comming-soon {
+  position: relative;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.comming-soon::after {
+  content: "COMMING SOON";
+  position: absolute;
+  left: 120%;
+  width: 82px;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 15px;
+  color: #fa5454;
+  padding: 4px 8px;
+  border: 1px solid #fa5454;
+  border-radius: 100px;
+}
+
 @media screen and (orientation) {
   .our-partners strong::after {
     content: "Our Partners";
-  }
-}
-
-@media screen and (max-width: 1500px) {
-  .main-title strong {
-    font-size: 68px;
   }
 }
 
@@ -661,12 +707,17 @@ main {
     background-size: 460px;
   }
 
-  .main-title strong {
+  .main-title {
+    padding: 20px;
+  }
+
+  .main-title h1 {
     font-size: 48px;
     line-height: 58px;
   }
 
   .main-title p {
+    width: 100%;
     font-size: 16px;
     line-height: 24px;
   }
@@ -714,8 +765,8 @@ main {
     width: 100%;
   }
 
-  .roles strong {
-    padding: 40px;
+  .roles > strong {
+    padding: 45px 0;
     font-size: 40px;
     line-height: 48px;
   }
@@ -747,10 +798,9 @@ main {
     line-height: 21px;
   }
 
-  .partner-info b {
-    font-weight: 600;
-    font-size: 18px;
-    line-height: 22px;
+  .partner-img {
+    width: 100px;
+    padding: 10px;
   }
 
   .roadmap-title {
@@ -784,32 +834,30 @@ main {
     line-height: 24px;
   }
 
-  .more-title {
+  .more-title strong {
     font-size: 40px;
     line-height: 48px;
   }
 
-  .more-sns-title p {
+  .more-sns-title strong {
     font-size: 32px;
     line-height: 38px;
   }
 
-  .wemix-link-zone > p {
+  .wemix-link-title strong {
     font-size: 32px;
     line-height: 38px;
-  }
-
-  .wemix-link-list strong {
-    font-size: 32px;
-    line-height: 38px;
-  }
-
-  .wemix-list {
-    padding: 20px 20px 50px 20px;
   }
 
   .wemix-list img {
     width: 18px;
+  }
+
+  .open {
+    bottom: 2%;
+    font-size: 12px;
+    line-height: 18px;
+    padding: 4px 8px;
   }
 }
 @media screen and (max-width: 768px) {
@@ -839,7 +887,7 @@ main {
     border-right: none;
   }
 
-  .main-title strong {
+  .main-title h1 {
     font-size: 32px;
     line-height: 38px;
   }
@@ -914,11 +962,6 @@ main {
     border-left: 1px solid #464646;
   }
 
-  .role-info b {
-    font-size: 16px;
-    line-height: 19px;
-  }
-
   .become {
     padding: 30px;
   }
@@ -938,12 +981,26 @@ main {
   }
 
   .our-partners {
-    padding: 30px 20px;
+    padding-bottom: 70px;
+  }
+
+  .our-partners strong::after {
+    font-size: 24px;
+    height: 34px;
+  }
+
+  .our-partners p {
+    font-size: 14px;
+    height: 21px;
   }
 
   .partner {
     flex-direction: column;
     align-items: flex-start;
+  }
+
+  .roadmap-title {
+    border: 0;
   }
 
   .roadmap-title p:first-child {
@@ -961,11 +1018,28 @@ main {
     line-height: 21px;
   }
 
+  .roadmap-info li {
+    border: 0;
+  }
+
   .roadmap-info ul {
     flex-direction: column;
   }
 
+  .accordion-title {
+    border: 1px solid #191919;
+  }
+
+  .accordion-title button {
+    display: block;
+  }
+
   .more-title {
+    font-size: 32px;
+    line-height: 38px;
+  }
+
+  .more-title strong {
     font-size: 32px;
     line-height: 38px;
   }
@@ -975,8 +1049,7 @@ main {
     align-items: flex-start;
   }
 
-  .more-sns-title p {
-    padding: 30px;
+  .more-sns-title strong {
     font-size: 24px;
     line-height: 34px;
   }
@@ -985,7 +1058,7 @@ main {
     padding: 3%;
   }
 
-  .wemix-link-zone > p {
+  .wemix-link-title strong {
     font-size: 24px;
     line-height: 34px;
   }
@@ -1003,17 +1076,49 @@ main {
     line-height: 34px;
   }
 
+  .wemix-link-list p {
+    font-size: 14px;
+    line-height: 21px;
+    padding: 20px;
+  }
+
+  .list-title span > img {
+    height: 16px;
+  }
+
   .wemix-list img {
     width: 16px;
+  }
+
+  .open {
+    position: relative;
+    font-size: 12px;
+    line-height: 15px;
   }
 
   .wemix-link-zone {
     flex-direction: column;
   }
 
+  .footer-family {
+    padding: 20px;
+  }
+
   .footer-info {
     flex-direction: column-reverse;
     justify-content: flex-start;
     align-items: flex-start;
+  }
+
+  .footer-select select {
+    display: block;
+  }
+
+  .family-Sites {
+    display: none;
+  }
+
+  .family-list-zone {
+    display: none;
   }
 }

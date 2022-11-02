@@ -7,7 +7,7 @@ const Role = ({ role }) => {
       <div className="role-info">
         <strong>{role.title}</strong>
         <span>{role.info}</span>
-        <span>{role.text}</span>
+        <span className="role-option">{role.text}</span>
       </div>
     </li>
   );
@@ -24,7 +24,7 @@ const RoleOfTheNCP = () => {
         <img
           className="role-img"
           src={process.env.PUBLIC_URL + "./image/integrity_security.png"}
-          alt="integrity and Security info img"
+          alt="integrity and Security"
         ></img>
       ),
     },
@@ -36,7 +36,7 @@ const RoleOfTheNCP = () => {
         <img
           className="role-img"
           src={process.env.PUBLIC_URL + "./image/consensus.png"}
-          alt="Consensus info img"
+          alt="Consensus"
         ></img>
       ),
     },
@@ -48,7 +48,7 @@ const RoleOfTheNCP = () => {
         <img
           className="role-img"
           src={process.env.PUBLIC_URL + "./image/governance.png"}
-          alt="Governance info img"
+          alt="Governance"
         ></img>
       ),
     },
@@ -60,7 +60,7 @@ const RoleOfTheNCP = () => {
         <img
           className="role-img"
           src={process.env.PUBLIC_URL + "./image/validation.png"}
-          alt="Validation info img"
+          alt="Validation"
         ></img>
       ),
     },
