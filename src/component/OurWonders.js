@@ -6,7 +6,7 @@ const OurPartners = ({ partner }) => {
       <div className="partner-img-zone">{partner.image}</div>
       <div className="partner-info">
         <div>
-          {partner.title}
+          <span>{partner.title}</span>
           <a href="/" target="_blank">
             <img src="./image/ic_link.png" alt="partner link" />
           </a>

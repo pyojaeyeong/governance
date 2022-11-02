@@ -45,6 +45,7 @@ body {
   box-sizing: border-box;
   color: white;
   font-family: "Pretendard-Regular";
+  overflow: hidden;
 }
 
 header {
@@ -172,7 +173,7 @@ main {
 }
 
 .user-list strong {
-  font-weight: 500;
+  font-weight: 600;
   font-size: 88px;
   line-height: 105px;
 }
@@ -213,7 +214,7 @@ main {
 .roles > strong {
   padding: 53px 0;
   display: block;
-  font-weight: 500;
+  font-weight: 600;
   font-size: 72px;
   line-height: 86px;
   text-align: center;
@@ -225,6 +226,7 @@ main {
 }
 
 .role-info > strong {
+  padding: 10px 0;
   font-weight: 600;
   font-size: 18px;
   line-height: 22px;
@@ -351,6 +353,12 @@ main {
   line-height: 24px;
   color: #d1d1d1;
   border-left: 1px solid #464646;
+}
+
+.partner-info span {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
 }
 
 .partner-info a {
@@ -697,6 +705,8 @@ main {
   @media screen and (orientation) {
     .our-partners strong::after {
       content: "Meet the WONDERS";
+      font-weight: 600;
+      padding: 10px 0;
     }
   }
   main {
@@ -796,6 +806,12 @@ main {
     font-weight: 500;
     font-size: 14px;
     line-height: 21px;
+  }
+
+  .partner-info span {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
   }
 
   .partner-img {
@@ -999,8 +1015,21 @@ main {
     align-items: flex-start;
   }
 
+  .partner-info span {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+  }
+
   .roadmap-title {
+    padding: 20px;
     border: 0;
+  }
+
+  .roadmap-title span {
+    padding: 20px 0;
+    font-size: 16px;
+    line-height: 19px;
   }
 
   .roadmap-title p:first-child {
@@ -1120,5 +1149,9 @@ main {
 
   .family-list-zone {
     display: none;
+  }
+
+  .footer-select img {
+    width: 157px;
   }
 }

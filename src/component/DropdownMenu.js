@@ -8,7 +8,7 @@ const DropdownMenu = () => {
   return (
     <DropdownContainer>
       <DropdownButton onClick={btnHandler} ref={btnRef}>
-        <img src="./image/gnb_right_menu.png" alt=""></img>
+        <img src="./image/gnb_right_menu.png" alt="gnb change button"></img>
       </DropdownButton>
       <Menu isDropped={btnIsOpen}>
         <DropdownMenuUL>
