@@ -455,7 +455,7 @@ main {
 }
 
 .more-title {
-  padding: 20px;
+  padding: 40px;
 }
 
 .more-title strong {
@@ -482,7 +482,7 @@ main {
 }
 
 .more-sns-title {
-  padding: 20px;
+  padding: 40px;
 }
 
 .more-sns-title strong {
@@ -521,7 +521,7 @@ main {
 
 .wemix-link-title {
   flex: 1;
-  padding: 20px;
+  padding: 40px;
   border-top: 1px solid #464646;
 }
 
@@ -600,7 +600,7 @@ main {
 }
 
 .footer-family {
-  padding: 40px;
+  padding: 48px 40px;
 }
 
 .family-Sites {

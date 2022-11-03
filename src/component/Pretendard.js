@@ -101,6 +101,7 @@ const Pretendard = () => {
       image: <img src="./image/sns_black5.png" alt="Click to move facebook" />,
     },
   ];
+
   return (
     <div className="footer-family">
       <div>
@@ -109,10 +110,10 @@ const Pretendard = () => {
             <img src="./image/logo_black.png" alt="GOVERNANCE"></img>
           </a>
           <select>
-            <option value="none" disabled selected>
+            <option defaultValue="Family Sites" disabled>
               Family Sites
             </option>
-            <option value="/">WEMIX</option>
+            <option value="WEMIX">WEMIX</option>
             <option value="WEMIXPLAY">WEMIX PLAY</option>
             <option value="NILE">NILE</option>
             <option value="WEMIX.FI">WEMIX.FI</option>
