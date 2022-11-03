@@ -108,7 +108,7 @@ main {
 .scroll {
   padding: 10px 20px;
   position: absolute;
-  bottom: 5%;
+  bottom: 53px;
   background-image: url(/public/image/ic_arrow.png);
   background-repeat: no-repeat;
   background-position: 0 45%;
@@ -158,7 +158,7 @@ main {
   flex: 1;
   flex-direction: column;
   gap: 20px;
-  padding: 30px;
+  padding: 32px 40px;
   border-right: 1px solid #464646;
 }
 
@@ -271,7 +271,7 @@ main {
 
 .become {
   background: #8db1e8;
-  padding: 100px 50px;
+  padding: 94px 0;
   text-align: center;
 }
 
@@ -283,7 +283,7 @@ main {
 }
 
 .become p {
-  margin: 20px 0;
+  padding: 0 0 32px 0;
   font-weight: 500;
   font-size: 18px;
   line-height: 27px;
@@ -320,7 +320,7 @@ main {
 .our-partners {
   position: relative;
   flex: 1;
-  padding: 20px;
+  padding: 40px;
 }
 
 .our-partners strong {
@@ -347,7 +347,7 @@ main {
 }
 
 .partner-info {
-  padding: 30px;
+  padding: 80px 40px;
   font-weight: 500;
   font-size: 16px;
   line-height: 24px;
@@ -366,9 +366,13 @@ main {
   vertical-align: middle;
 }
 
+.partner-img-zone {
+  width: 263px;
+}
+
 .partner-img {
+  margin: 0 65px;
   width: 132px;
-  padding: 30px;
 }
 
 .roadmap {
@@ -549,13 +553,17 @@ main {
 }
 
 .wemix-list {
+  display: flex;
+  flex-direction: column;
   position: relative;
   width: 50%;
   border: 1px solid #464646;
+  padding: 40px;
 }
 
 .wemix-list p {
-  padding: 0 20px 150px 20px;
+  order: 2;
+  padding: 20px 0;
 }
 
 .wemix-list img {
@@ -563,8 +571,9 @@ main {
 }
 
 .open {
-  position: absolute;
-  bottom: 10%;
+  order: 3;
+  text-align: center;
+  width: 120px;
   font-weight: 500;
   font-size: 14px;
   line-height: 21px;
@@ -578,12 +587,16 @@ main {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px;
+  order: 1;
 }
 
 .list-title span > img {
   width: auto;
   height: 25px;
+}
+
+.list-title span > a {
+  display: block;
 }
 
 .footer-family {
@@ -817,7 +830,7 @@ main {
 
   .partner-img {
     width: 100px;
-    padding: 10px;
+    margin: 0 55px;
   }
 
   .roadmap-title {
@@ -871,10 +884,8 @@ main {
   }
 
   .open {
-    bottom: 2%;
     font-size: 12px;
     line-height: 18px;
-    padding: 4px 8px;
   }
 }
 @media screen and (max-width: 768px) {
@@ -998,7 +1009,7 @@ main {
   }
 
   .our-partners {
-    padding-bottom: 70px;
+    padding: 25px 20px;
   }
 
   .our-partners strong::after {
@@ -1008,12 +1019,15 @@ main {
 
   .our-partners p {
     font-size: 14px;
-    height: 21px;
   }
 
   .partner {
     flex-direction: column;
     align-items: flex-start;
+  }
+
+  .partner-img {
+    margin: 32px 20px;
   }
 
   .partner-info span {
@@ -1102,6 +1116,14 @@ main {
     width: 100%;
   }
 
+  .wemix-list:last-child {
+    display: block;
+  }
+
+  .wemix-list:last-child .list-title {
+    display: inline;
+  }
+
   .wemix-link-list {
     flex-direction: column;
   }
@@ -1114,10 +1136,10 @@ main {
   .wemix-link-list p {
     font-size: 14px;
     line-height: 21px;
-    padding: 20px;
   }
 
   .list-title span > img {
+    position: relative;
     height: 16px;
   }
 
@@ -1126,7 +1148,9 @@ main {
   }
 
   .open {
-    position: relative;
+    margin-left: 10px;
+    vertical-align: middle;
+    width: 105px;
     font-size: 12px;
     line-height: 15px;
   }

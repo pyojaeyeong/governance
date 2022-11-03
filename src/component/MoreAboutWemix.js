@@ -13,14 +13,11 @@ const Sns = ({ sns }) => {
 const WemixLink = ({ link }) => {
   return (
     <li className="wemix-list">
-      <div className="list-title">
+      <div className="list-title" onClick={console.log("HELLO")}>
         <span>{link.name}</span>
-        {link.link ? (
-          <button>{link.link}</button>
-        ) : (
-          <span className="open">COMING SOON</span>
-        )}
+        {link.link ? <span>{link.link}</span> : null}
       </div>
+      {!link.link && <span className="open">COMING SOON</span>}
       <p>{link.info}</p>
     </li>
   );
