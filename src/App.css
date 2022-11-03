@@ -889,6 +889,9 @@ main {
   }
 }
 @media screen and (max-width: 768px) {
+  header {
+    padding: 5px 16px;
+  }
   header .logo {
     width: 0;
     background-image: none;
@@ -951,6 +954,7 @@ main {
   }
 
   .user-list {
+    padding: 20px;
     border-right: none;
     border-top: 1px solid #464646;
   }
@@ -1080,6 +1084,7 @@ main {
   }
 
   .more-title {
+    padding: 20px;
     font-size: 32px;
     line-height: 38px;
   }
@@ -1087,6 +1092,10 @@ main {
   .more-title strong {
     font-size: 32px;
     line-height: 38px;
+  }
+
+  .more-sns-title {
+    padding: 20px;
   }
 
   .more-sns-zone {
@@ -1113,6 +1122,7 @@ main {
   }
 
   .wemix-list {
+    padding: 20px;
     width: 100%;
   }
 
@@ -1122,6 +1132,10 @@ main {
 
   .wemix-list:last-child .list-title {
     display: inline;
+  }
+
+  .wemix-link-title {
+    padding: 20px;
   }
 
   .wemix-link-list {
