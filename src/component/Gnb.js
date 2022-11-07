@@ -5,7 +5,7 @@ const Gnb = () => {
   return (
     <header>
       <div className="logo">
-        <a href="/">
+        <a href="/" title="Governance main page">
           <img src="/image/logo_wemixGovernance.png" alt="Governance" />
         </a>
       </div>

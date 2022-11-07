@@ -9,7 +9,7 @@ const Become = () => {
         and enhancing the community experiences within our new layer 1
         mega-ecosystem. Contribute to the growth of WEMIX3.0
       </p>
-      <a href="/" target="_blank">
+      <a href="/" target="_blank" title="Become a WONDER">
         Become a WONDER
       </a>
     </div>

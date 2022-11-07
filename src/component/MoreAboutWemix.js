@@ -10,17 +10,13 @@ const Sns = ({ sns }) => {
   );
 };
 
-const moveLink = (e) => {
-  console.log(e.target);
-};
-
 const WemixLink = ({ link }) => {
   return (
     <li className="wemix-list">
-      <button onClick={moveLink} className="list-title">
+      <div className="list-title">
         <span>{link.name}</span>
         {link.link ? <span>{link.link}</span> : null}
-      </button>
+      </div>
       {!link.link && <span className="open">COMING SOON</span>}
       <p>{link.info}</p>
     </li>

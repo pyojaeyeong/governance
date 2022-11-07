@@ -1,36 +1,19 @@
 import React, { useState } from "react";
-// import { AccordionContainer, AccordionContent } from "./Accorion";
+import { useMediaQuery } from "react-responsive";
 
-// const Accordion = ({ phaseList }) => {
-//   const [active, setActive] = useState();
-
-//   const handleClick = (title) => {
-//     setActive(title === active ? null : title);
-//   };
-
-//   return (
-//     <AccordionContainer>
-//       {phaseList.map((phase) => {
-//         let isActive = active === phase.title;
-//         return (
-//           <AccordionContent
-//             onClick={() => handleClick(phase.title)}
-//             itemName={phase.title}
-//             itemContent={phase.info}
-//             isActive={isActive}
-//           />
-//         );
-//       })}
-//     </AccordionContainer>
-//   );
-// };
+const Mobile = ({ children }) => {
+  const isMobile = useMediaQuery({
+    query: "(max-width:768px)",
+  });
+  return <>{isMobile && children}</>;
+};
 
 const Accordion = ({ title, info }) => {
-  const [isActive, setIsActive] = useState(true);
+  const [isActive, setIsActive] = useState(false);
   return (
-    <li className="phase-list">
-      <div className="accordion-title">
-        <div className="phase">{title}</div>
+    <li className="phase-list-mobile">
+      <div className="accordion-zone-mobile">
+        <div className="phase-title-mobile">{title}</div>
         <button onClick={() => setIsActive(!isActive)}>
           {isActive ? (
             <img
@@ -45,7 +28,18 @@ const Accordion = ({ title, info }) => {
           )}
         </button>
       </div>
-      {isActive && <div className="accordion-content">{info}</div>}
+      {isActive && <div className="accordion-content-mobile">{info}</div>}
+    </li>
+  );
+};
+
+const Ahase = ({ title, info }) => {
+  return (
+    <li className="phase-li">
+      <div className="phase-zone">
+        <div className="phase-title">{title}</div>
+        <div className="phase-content">{info}</div>
+      </div>
     </li>
   );
 };
@@ -171,11 +165,13 @@ const RoadMap = () => {
         </div>
         <div className="roadmap-info">
           <ul className="phase-list">
-            {/* <li>
-              <Accordion phaseList={phaseList} />
-            </li> */}
+            <Mobile>
+              {phaseList.map(({ title, info, id }) => (
+                <Accordion title={title} info={info} key={id} />
+              ))}
+            </Mobile>
             {phaseList.map(({ title, info, id }) => (
-              <Accordion title={title} info={info} key={id} />
+              <Ahase title={title} info={info} key={id} />
             ))}
           </ul>
         </div>

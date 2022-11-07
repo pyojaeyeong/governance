@@ -174,7 +174,7 @@ main {
 
 .user-list strong {
   font-weight: 600;
-  font-size: 88px;
+  font-size: 4vw;
   line-height: 105px;
 }
 
@@ -182,7 +182,7 @@ main {
   padding-left: 70px;
   background-image: url(/public/image/bl.png);
   background-repeat: no-repeat;
-  background-position: 0 60%;
+  background-position: 0 50%;
 }
 
 .rewards {
@@ -207,7 +207,7 @@ main {
 
 .rewards-item strong {
   font-weight: 600;
-  font-size: 56px;
+  font-size: 3vw;
   line-height: 67px;
 }
 
@@ -361,11 +361,6 @@ main {
   line-height: 24px;
 }
 
-.partner-info a {
-  padding: 5px;
-  vertical-align: middle;
-}
-
 .partner-img-zone {
   width: 263px;
 }
@@ -418,7 +413,7 @@ main {
   border-right: 1px solid #464646;
 }
 
-.accordion-title {
+.accordion-zone-mobile {
   padding: 20px;
   display: flex;
   flex-direction: row;
@@ -426,29 +421,50 @@ main {
   align-items: center;
 }
 
-.accordion-title span {
-  padding: 3px 9px;
-  background-color: black;
-  color: white;
+.phase-zone {
+  padding: 40px;
 }
 
-.accordion-title button {
-  display: none;
-}
-
-.phase {
+.phase-title {
   font-weight: 600;
   font-size: 44px;
   line-height: 62px;
 }
 
-.phase-list {
+.accordion-zone-mobile span {
+  padding: 3px 9px;
+  background-color: black;
+  color: white;
+}
+
+.accordion-zone-mobile button {
+  display: none;
+}
+
+.phase-title-mobile {
+  font-weight: 600;
+  font-size: 44px;
+  line-height: 62px;
+}
+
+.phase-list-mobile {
   position: relative;
   width: 100%;
 }
 
-.accordion-content {
+.phase-content p {
+  padding: 10px 0;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
+}
+
+.accordion-content-mobile {
   padding: 20px;
+}
+
+.accordion-content-mobile p {
+  padding: 10px 0;
   font-weight: 500;
   font-size: 18px;
   line-height: 27px;
@@ -465,6 +481,7 @@ main {
 }
 
 .more-sns-zone {
+  position: relative;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -481,11 +498,8 @@ main {
   width: 100%;
 }
 
-.more-sns-title {
-  padding: 40px;
-}
-
 .more-sns-title strong {
+  padding: 40px;
   font-weight: 600;
   font-size: 3vw;
   line-height: 67px;
@@ -520,15 +534,15 @@ main {
 }
 
 .wemix-link-title {
+  position: relative;
   flex: 1;
-  padding: 40px;
   border-top: 1px solid #464646;
 }
 
 .wemix-link-title strong {
+  padding-left: 40px;
   font-weight: 600;
   font-size: 3vw;
-  line-height: 67px;
 }
 
 .wemix-link {
@@ -708,6 +722,10 @@ main {
   border-radius: 100px;
 }
 
+.footer-sns-list a {
+  display: block;
+}
+
 @media screen and (orientation) {
   .our-partners strong::after {
     content: "Our Partners";
@@ -835,7 +853,7 @@ main {
 
   .roadmap-title {
     text-align: start;
-    padding: 50px;
+    padding: 40px;
   }
 
   .roadmap-title p:first-child {
@@ -854,7 +872,12 @@ main {
     line-height: 24px;
   }
 
-  .phase {
+  .phase-title {
+    font-size: 24px;
+    line-height: 34px;
+  }
+
+  .phase-title-mobile {
     font-size: 24px;
     line-height: 34px;
   }
@@ -972,6 +995,7 @@ main {
   .rewards-item {
     width: 100%;
     padding: 5% 0;
+    margin: 0;
   }
 
   .rewards-item p {
@@ -1074,12 +1098,15 @@ main {
     flex-direction: column;
   }
 
-  .accordion-title {
-    border-top: 1px solid #191919;
-    border-bottom: 1px solid #191919;
+  .phase-li {
+    display: none;
   }
 
-  .accordion-title button {
+  .accordion-zone-mobile {
+    border-top: 1px solid #191919;
+  }
+
+  .accordion-zone-mobile button {
     display: block;
   }
 
@@ -1104,6 +1131,7 @@ main {
   }
 
   .more-sns-title strong {
+    padding: 0;
     font-size: 24px;
     line-height: 34px;
   }
@@ -1117,6 +1145,7 @@ main {
   }
 
   .wemix-link-title strong {
+    padding: 0;
     font-size: 24px;
     line-height: 34px;
   }
